@@ -26,7 +26,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${syne.variable} ${sourceSans.variable}`}>
+    <html
+      lang="en"
+      className={`${syne.variable} ${sourceSans.variable}`}
+      data-scroll-behavior="smooth"
+    >
       <body className="font-body antialiased">
         <Navbar />
         <main>{children}</main>
