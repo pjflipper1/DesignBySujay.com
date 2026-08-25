@@ -7,7 +7,7 @@ function img(filename) {
 }
 
 export const metadata = {
-  title: "PacSun Mobile App Redesign | Sujay Subramanyam",
+  title: "PacSun Mobile App Redesign",
   description:
     "A mobile app redesign concept for PacSun—improving home, search, catalog, and product flows for Gen Z streetwear shoppers.",
 };
@@ -16,7 +16,7 @@ function SectionHeading({ id, children }) {
   return (
     <h2
       id={id}
-      className="scroll-mt-8 border-b border-zinc-200 pb-2 text-xl font-bold tracking-tight text-zinc-900"
+      className="scroll-mt-28 border-b border-line pb-2 font-display text-xl font-bold tracking-tight text-ink"
     >
       {children}
     </h2>
@@ -25,7 +25,7 @@ function SectionHeading({ id, children }) {
 
 function WideFigure({ src, alt, title, children }) {
   return (
-    <figure className="space-y-4 overflow-hidden rounded-lg border border-zinc-200 bg-zinc-50">
+    <figure className="space-y-4 overflow-hidden border border-line bg-white/50">
       <div className="relative aspect-[16/10] w-full">
         <Image
           src={src}
@@ -35,12 +35,12 @@ function WideFigure({ src, alt, title, children }) {
           sizes="(max-width: 768px) 100vw, 768px"
         />
       </div>
-      <figcaption className="space-y-2 border-t border-zinc-200 px-4 py-4">
+      <figcaption className="space-y-2 border-t border-line px-4 py-4">
         {title ? (
-          <p className="text-sm font-semibold text-zinc-900">{title}</p>
+          <p className="text-sm font-semibold text-ink">{title}</p>
         ) : null}
         {children ? (
-          <p className="text-sm leading-relaxed text-zinc-600">{children}</p>
+          <p className="text-sm leading-relaxed text-muted">{children}</p>
         ) : null}
       </figcaption>
     </figure>
@@ -49,7 +49,7 @@ function WideFigure({ src, alt, title, children }) {
 
 function PhoneFigure({ src, alt, title, children }) {
   return (
-    <figure className="space-y-4 overflow-hidden rounded-lg border border-zinc-200 bg-zinc-50">
+    <figure className="space-y-4 overflow-hidden border border-line bg-white/50">
       <div className="relative mx-auto aspect-[9/19] w-full max-w-[280px] py-6">
         <Image
           src={src}
@@ -59,12 +59,12 @@ function PhoneFigure({ src, alt, title, children }) {
           sizes="(max-width: 768px) 70vw, 280px"
         />
       </div>
-      <figcaption className="space-y-2 border-t border-zinc-200 px-4 py-4">
+      <figcaption className="space-y-2 border-t border-line px-4 py-4">
         {title ? (
-          <p className="text-sm font-semibold text-zinc-900">{title}</p>
+          <p className="text-sm font-semibold text-ink">{title}</p>
         ) : null}
         {children ? (
-          <p className="text-sm leading-relaxed text-zinc-600">{children}</p>
+          <p className="text-sm leading-relaxed text-muted">{children}</p>
         ) : null}
       </figcaption>
     </figure>
@@ -84,7 +84,7 @@ function Mockup({ src, alt, caption }) {
         />
       </div>
       {caption ? (
-        <figcaption className="max-w-xs text-center text-sm text-zinc-500">
+        <figcaption className="max-w-xs text-center text-sm text-muted">
           {caption}
         </figcaption>
       ) : null}
@@ -94,68 +94,61 @@ function Mockup({ src, alt, caption }) {
 
 export default function PacSunRedesignPage() {
   return (
-    <article className="min-h-screen bg-white text-zinc-900">
-      <header className="border-b border-zinc-200">
-        <div className="mx-auto flex max-w-3xl flex-col gap-4 px-6 py-8">
+    <article className="min-h-screen text-ink">
+      <header className="border-b border-line/80 bg-white/40">
+        <div className="mx-auto flex max-w-3xl flex-col gap-4 px-6 py-10 md:py-14">
           <Link
-            href="/"
-            className="text-sm text-zinc-500 underline-offset-4 hover:text-zinc-900 hover:underline"
+            href="/case-studies"
+            className="text-sm font-medium text-accent underline-offset-4 hover:underline"
           >
-            ← Back to portfolio
+            ← Back to Case Studies
           </Link>
-          <p className="text-sm font-medium uppercase tracking-wide text-zinc-500">
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-muted">
             Mobile App Redesign Concept
           </p>
-          <h1 className="text-3xl font-bold leading-tight md:text-4xl">
+          <h1 className="font-display text-3xl font-bold leading-tight tracking-tight md:text-5xl">
             PacSun Mobile App Redesign
           </h1>
-          <p className="text-sm text-zinc-600">Product Design · UX/UI · 2026</p>
+          <p className="text-sm text-muted">Product Design · UX/UI · 2026</p>
           <nav
             aria-label="Case study sections"
-            className="flex flex-wrap gap-x-4 gap-y-2 text-sm text-zinc-600"
+            className="flex flex-wrap gap-x-4 gap-y-2 text-sm text-muted"
           >
-            <a href="#overview" className="hover:text-zinc-900 hover:underline">
+            <a href="#overview" className="hover:text-ink hover:underline">
               Overview
             </a>
-            <a href="#customer" className="hover:text-zinc-900 hover:underline">
+            <a href="#customer" className="hover:text-ink hover:underline">
               Customer
             </a>
-            <a
-              href="#inspiration"
-              className="hover:text-zinc-900 hover:underline"
-            >
+            <a href="#inspiration" className="hover:text-ink hover:underline">
               Inspiration
             </a>
-            <a href="#process" className="hover:text-zinc-900 hover:underline">
+            <a href="#process" className="hover:text-ink hover:underline">
               Process
             </a>
-            <a href="#home" className="hover:text-zinc-900 hover:underline">
+            <a href="#home" className="hover:text-ink hover:underline">
               Home
             </a>
-            <a href="#search" className="hover:text-zinc-900 hover:underline">
+            <a href="#search" className="hover:text-ink hover:underline">
               Search
             </a>
-            <a href="#catalog" className="hover:text-zinc-900 hover:underline">
+            <a href="#catalog" className="hover:text-ink hover:underline">
               Catalog
             </a>
-            <a href="#product" className="hover:text-zinc-900 hover:underline">
+            <a href="#product" className="hover:text-ink hover:underline">
               Product
             </a>
-            <a
-              href="#next-steps"
-              className="hover:text-zinc-900 hover:underline"
-            >
+            <a href="#next-steps" className="hover:text-ink hover:underline">
               Next steps
             </a>
           </nav>
         </div>
       </header>
 
-      <div className="mx-auto max-w-3xl space-y-14 px-6 py-10">
-        {/* ——— Overview ——— */}
+      <div className="mx-auto max-w-3xl space-y-14 px-6 py-10 md:py-14">
         <section id="overview" className="space-y-4">
           <SectionHeading>Project overview</SectionHeading>
-          <p className="leading-relaxed text-zinc-700">
+          <p className="leading-relaxed text-ink-soft">
             PacSun is a streetwear retailer based out of California, selling
             items from clothing brands that target southern California youth
             subculture related to surfing, skating, and music. The retailer
@@ -164,7 +157,7 @@ export default function PacSunRedesignPage() {
             I downloaded as a PacSun shopper and felt the immediate need for
             redesign.
           </p>
-          <p className="leading-relaxed text-zinc-700">
+          <p className="leading-relaxed text-ink-soft">
             As an avid user of PacSun, opening the mobile app led me to not feel
             the way I should when I open an e-commerce application. The screen
             real estate on the home page was not doing what e-commerce home pages
@@ -176,10 +169,9 @@ export default function PacSunRedesignPage() {
           </p>
         </section>
 
-        {/* ——— Customer ——— */}
         <section id="customer" className="space-y-4">
           <SectionHeading>Customer profile</SectionHeading>
-          <p className="leading-relaxed text-zinc-700">
+          <p className="leading-relaxed text-ink-soft">
             The majority of PacSun users are typically between 16 and 24 years
             old—in high school, college, or just starting their careers as young
             adults. As part of Gen Z, millennials, and Gen Alpha, they are
@@ -189,7 +181,7 @@ export default function PacSunRedesignPage() {
             a mobile experience that feels as snappy and minimal as the social
             media apps they use daily.
           </p>
-          <p className="leading-relaxed text-zinc-700">
+          <p className="leading-relaxed text-ink-soft">
             During my design process, I took inspiration from the aesthetic of
             hypebeast and sneakerhead influencers. PacSun’s market skews more
             toward skaters and surfers than hypebeasts, but the design language
@@ -198,10 +190,9 @@ export default function PacSunRedesignPage() {
           </p>
         </section>
 
-        {/* ——— Design inspiration ——— */}
         <section id="inspiration" className="space-y-10">
           <SectionHeading>Design inspiration</SectionHeading>
-          <p className="leading-relaxed text-zinc-700">
+          <p className="leading-relaxed text-ink-soft">
             Before high-fidelity screens, I collected references from products
             whose layout, hierarchy, and interaction patterns fit the PacSun
             shopper. Each influenced a different layer of the redesign—from how
@@ -249,10 +240,9 @@ export default function PacSunRedesignPage() {
           </PhoneFigure>
         </section>
 
-        {/* ——— Design process ——— */}
         <section id="process" className="space-y-6">
           <SectionHeading>Design process</SectionHeading>
-          <p className="leading-relaxed text-zinc-700">
+          <p className="leading-relaxed text-ink-soft">
             I started with low-fidelity mockups to quickly sketch and think
             through layouts—a skeleton of the UI I could refine later. Moving to
             high-fidelity mockups, I referenced product imagery from the PacSun
@@ -263,10 +253,10 @@ export default function PacSunRedesignPage() {
           </p>
           <div className="grid gap-8 md:grid-cols-2">
             <figure className="space-y-3">
-              <p className="text-sm font-semibold uppercase tracking-wide text-zinc-500">
+              <p className="text-sm font-semibold uppercase tracking-wide text-muted">
                 Low fidelity
               </p>
-              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg border border-zinc-200">
+              <div className="relative aspect-[4/3] w-full overflow-hidden border border-line">
                 <Image
                   src={img("Screenshot 2026-05-22 010814.png")}
                   alt="Low-fidelity wireframes"
@@ -277,10 +267,10 @@ export default function PacSunRedesignPage() {
               </div>
             </figure>
             <figure className="space-y-3">
-              <p className="text-sm font-semibold uppercase tracking-wide text-zinc-500">
+              <p className="text-sm font-semibold uppercase tracking-wide text-muted">
                 High fidelity
               </p>
-              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg border border-zinc-200">
+              <div className="relative aspect-[4/3] w-full overflow-hidden border border-line">
                 <Image
                   src={img("Screenshot 2026-05-22 010620.png")}
                   alt="High-fidelity mockups"
@@ -293,7 +283,6 @@ export default function PacSunRedesignPage() {
           </div>
         </section>
 
-        {/* ——— Home ——— */}
         <section id="home" className="space-y-8">
           <SectionHeading>Home</SectionHeading>
           <div className="grid gap-10 sm:grid-cols-2">
@@ -310,7 +299,6 @@ export default function PacSunRedesignPage() {
           </div>
         </section>
 
-        {/* ——— Search ——— */}
         <section id="search" className="space-y-8">
           <SectionHeading>Search</SectionHeading>
           <div className="grid gap-10 sm:grid-cols-2">
@@ -327,7 +315,6 @@ export default function PacSunRedesignPage() {
           </div>
         </section>
 
-        {/* ——— Catalog ——— */}
         <section id="catalog" className="space-y-8">
           <SectionHeading>Catalog</SectionHeading>
           <div className="grid gap-10 sm:grid-cols-2">
@@ -344,7 +331,6 @@ export default function PacSunRedesignPage() {
           </div>
         </section>
 
-        {/* ——— Product ——— */}
         <section id="product" className="space-y-8">
           <SectionHeading>Product</SectionHeading>
           <div className="grid place-items-center gap-10">
@@ -356,10 +342,9 @@ export default function PacSunRedesignPage() {
           </div>
         </section>
 
-        {/* ——— Next steps ——— */}
         <section id="next-steps" className="space-y-4">
           <SectionHeading>Next steps</SectionHeading>
-          <ul className="list-inside list-disc space-y-2 text-zinc-700">
+          <ul className="list-inside list-disc space-y-2 text-ink-soft">
             <li className="leading-relaxed">
               Validate flows with PacSun shoppers through moderated usability
               tests.
